@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: none;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.15);  
+    backdrop-filter: blur(10px);             
+    -webkit-backdrop-filter: blur(10px);    
+    position: fixed;      
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;         
+}
+
+nav .logo {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: rgb(255, 253, 253);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('home.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero .content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.top-text {
+    color: white;         
+    font-size: 17px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+    font-weight: 500;
+    position: relative;
+    z-index: 3;           
+}
+
+.hero h1 {
+    color: white;
+    font-size: 70px;
+    letter-spacing: 12px;
+    margin-bottom: 40px;
+}
+
+.hero button {
+    padding: 13px 40px;
+    font-size: 17px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: white;
+    transition: .3s;
+}
+
+.hero button:hover {
+    transform: scale(1.07);
+}
+
+.opening-clean {
+    width: 100%;
+    padding: 90px 20px;       
+    text-align: center;
+    margin-top: 50px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.opening-clean::before,
+.opening-clean::after {
+    content: "";
+    display: block;
+    width: 100px;               
+    height: 3px;                
+    background: black;
+    margin: 25px auto;
+    opacity: 0.8;
+}
+
+.open-star {
+    font-size: 32px;            
+    color: #111;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.open-title {
+    font-size: 34px;             
+    letter-spacing: 4px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.open-text {
+    font-size: 26px;           
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.closed {
+    margin-top: 30px;
+    font-size: 22px;            
+    font-style: italic;
+    color: #444;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.top-food {
+    width: 100%;
+    margin-top: 50px;
+    padding: 40px 25px;
+    background: #000;            
+    color: white;               
+}
+
+.top-food h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.top-progress {
+    width: 160px;
+    height: 8px;
+    background: #444;         
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 80px;
+    height: 100%;
+    background: #fff;          
+    border-radius: 20px;
+}
+
+.top-food-slider {
+    width: 100%;
+    background: #000;            
+    padding: 25px 0 40px 0;
+    color: white;
+}
+
+.top-food-gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 25px;
+    scroll-behavior: smooth;
+}
+
+.top-food-gallery::-webkit-scrollbar {
+    height: 6px;
+}
+
+.top-food-gallery::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 20px;
+}
+
+.top-food-item {
+    min-width: 170px;
+    text-align: center;
+}
+
+.top-food-item img {
+    width: 170px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.top-food-item p {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+}
+
+.top-food-section {
+    background: #000;
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+}
+
+.top-food-section h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.top-food-gallery {
+    display: flex;
+    justify-content: center;  
+    gap: 28px;
+    overflow-x: auto;
+    padding: 10px 20px;
+    scroll-behavior: smooth;
+}
+
+.top-food-gallery::-webkit-scrollbar {
+    height: 6px;
+}
+.top-food-gallery::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 30px;
+}
+
+.top-food-item {
+    text-align: center;
+    min-width: 170px;
+}
+
+.top-food-item img {
+    width: 170px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.top-food-item p {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.makan-disini-btn {
+    padding: 13px 40px;
+    font-size: 17px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: #ffcc00;
+    color: black;
+    font-weight: bold;
+    transition: .3s;
+    margin-top: 20px;
+}
+
+.makan-disini-btn:hover {
+    transform: scale(1.07);
+    background: #e6b800;
+}
+
+.login-background {
+    background: url('home.jpg') no-repeat center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 360px;
+    margin: 100px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.30);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 10px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.btn-login {
+    width: 100%;
+    background: #ff8c00;
+    padding: 12px;
+    display: block;
+    color: white;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background: #e07a00;
+}
+
+.btn-cancel {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    background: #555;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-cancel:hover {
+    background: #333;
+}
+
