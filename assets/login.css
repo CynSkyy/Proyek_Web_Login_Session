@@ -311,7 +311,8 @@ nav ul li a {
 }
 
 .login-background {
-    background: url('home.jpg') no-repeat center/cover;
+    background: url('image/home.jpg') no-repeat center center;
+    background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;

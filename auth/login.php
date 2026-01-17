@@ -2,6 +2,7 @@
 session_start();
 include '../config/database.php';
 
+
 $error = "";
 
 if (isset($_POST['login'])) {
@@ -28,27 +29,29 @@ if (isset($_POST['login'])) {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="../assets/login.css">
 </head>
 <body>
 
-<div class="login-container">
-    <h2>Login</h2>
+<div class="login-background">
+    <div class="login-container">
+        <h2>Login</h2>
 
-    <?php if ($error): ?>
-        <p style="color:red"><?= $error ?></p>
-    <?php endif; ?>
+        <?php if ($error): ?>
+            <p style="color:red"><?= $error ?></p>
+        <?php endif; ?>
 
-    <form method="POST">
-        <input type="email" name="email" placeholder="Email" required><br><br>
-        <input type="password" name="password" placeholder="Password" required><br><br>
+        <form method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
 
-        <button type="submit" name="login">Login</button>
-    </form>
+            <button type="submit" name="login" class="btn-login">Login</button>
+        </form>
 
-    <br>
-    <a href="Project.html">← Kembali ke Beranda</a>
+        <a href="Project.html" class="btn-cancel">← Kembali ke Beranda</a>
+    </div>
 </div>
 
 </body>
 </html>
+
