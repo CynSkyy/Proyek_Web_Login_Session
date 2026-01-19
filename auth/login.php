@@ -16,8 +16,9 @@ if (isset($_POST['login'])) {
         $_SESSION['login'] = true;
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['nama'] = $user['nama'];
-        header("Location: dashboard.php");
+        header("Location: ../project.php");
         exit;
+
     } else {
         $error = "Email atau password salah!";
     }
@@ -48,7 +49,13 @@ if (isset($_POST['login'])) {
             <button type="submit" name="login" class="btn-login">Login</button>
         </form>
 
-        <a href="../Project.html" class="btn-cancel">← Kembali ke Beranda</a>
+        <p style="margin-top:10px; font-size:14px;">
+            Tidak punya akun?
+        <a href="register.php">Daftar di sini</a>
+        </p>
+
+        <a href="../Project.php" class="btn-cancel">← Kembali ke Beranda</a>
+
     </div>
 </div>
 
