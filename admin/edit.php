@@ -30,24 +30,38 @@ if (isset($_POST['update'])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
     <title>Edit User</title>
+    <link rel="stylesheet" href="../assets/admin.css">
 </head>
 <body>
 
-<h2>Edit User</h2>
+<div class="container">
 
-<form method="POST">
-    <input type="text" name="nama" value="<?= $user['nama'] ?>" required><br><br>
-    <input type="email" name="email" value="<?= $user['email'] ?>" required><br><br>
-    <input type="password" name="password" placeholder="Kosongkan jika tidak diubah"><br><br>
+    <div class="header">
+        <h2>Edit User</h2>
+        <a href="index.php" class="back">← Kembali</a>
+    </div>
 
-    <button type="submit" name="update">Update</button>
-</form>
+    <form method="POST" class="form-admin">
+        <label>Nama</label>
+        <input type="text" name="nama" value="<?= $user['nama'] ?>" required>
 
-<br>
-<a href="index.php">← Kembali</a>
+        <label>Email</label>
+        <input type="email" name="email" value="<?= $user['email'] ?>" required>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Kosongkan jika tidak diubah">
+
+        <button type="submit" name="update" class="btn btn-edit">
+            Update
+        </button>
+    </form>
+
+</div>
 
 </body>
 </html>
+

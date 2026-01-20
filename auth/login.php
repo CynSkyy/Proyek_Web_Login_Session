@@ -16,7 +16,7 @@ if (isset($_POST['login'])) {
         $_SESSION['login'] = true;
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['nama'] = $user['nama'];
-        header("Location: ../project.php");
+        header("Location: ../admin/index.php");
         exit;
 
     } else {
