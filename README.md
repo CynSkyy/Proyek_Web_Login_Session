@@ -8,7 +8,8 @@ Panduan Sederhana penggunaan project Restoran Nusantara
 - File SQL terdapat pada File database (restoran.sql)
 
 Panduan penggunaan web
--Masuk pada project.php
--klik ORDER DISINI
--Lakukan Registrasi
--Login
+
+- Masuk pada project.php
+- klik ORDER DISINI
+- Lakukan Registrasi
+- Login
