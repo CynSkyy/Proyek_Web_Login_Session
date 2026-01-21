@@ -22,8 +22,8 @@ if (isset($_POST['register'])) {
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
         $insert = mysqli_query($conn, 
-            "INSERT INTO users (nama, email, password)
-             VALUES ('$nama', '$email', '$hash')"
+            "INSERT INTO users (nama, email, password, role)
+             VALUES ('$nama', '$email', '$hash', 'user')"
         );
 
         if ($insert) {

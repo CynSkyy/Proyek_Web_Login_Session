@@ -2,7 +2,6 @@
 session_start();
 include '../config/database.php';
 
-
 $error = "";
 
 if (isset($_POST['login'])) {
@@ -13,11 +12,19 @@ if (isset($_POST['login'])) {
     $user = mysqli_fetch_assoc($query);
 
     if ($user && password_verify($password, $user['password'])) {
+
         $_SESSION['login'] = true;
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['nama'] = $user['nama'];
-        header("Location: ../admin/index.php");
-        exit;
+        $_SESSION['role'] = $user['role'];
+
+        if ($user['role'] == 'admin') {
+            header("Location: ../admin/index.php");
+            exit;
+        } else {
+            header("Location: ../user/index.php");
+            exit;
+        }
 
     } else {
         $error = "Email atau password salah!";
@@ -61,4 +68,3 @@ if (isset($_POST['login'])) {
 
 </body>
 </html>
-
