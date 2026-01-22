@@ -24,5 +24,3 @@
 - Admin yang login hanya dapat melihat data user yang terdaftar
 - Untuk keluar dari sistem, klik tombol **Logout**
 
-## NOTE -> email(admin) : admin@resto.com
-##      -> PASSWORD     : admin123
